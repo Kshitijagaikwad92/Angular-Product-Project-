@@ -1,0 +1,28 @@
+<div class="container">
+    <p>
+        <button class="btn btn-success" routerLink='/AddProduct'>Add Product</button>
+    </p>
+    <table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Product ID</th>
+        <th>Product Name</th>
+        <th>Product Price</th>
+        <th>Product Quantity</th>
+        <th>Action</th>
+     </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = 'let p of products'>
+        <td>{{p.id}}</td>   
+        <td>{{p.name}}</td>
+        <td>{{p.price}}</td>
+        <td>{{p.qty}}</td>
+        <td>
+            <button class="btn btn-danger" (click) = "deleteProduct(p.id)">Delete</button>
+            <button class="btn btn-info" [routerLink] ="['/Editproduct/', p.id]">Edit</button>
+        </td>
+        </tr>
+    </tbody>
+    </table>
+    </div>

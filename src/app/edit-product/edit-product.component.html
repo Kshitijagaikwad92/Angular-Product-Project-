@@ -1,0 +1,11 @@
+<div class="col-md-4 offset-md-4 shadow-lg p-5">
+    <form [formGroup] = 'productEditForm' (ngSubmit) = 'EditProduct()'>
+        <div class="row g-3">
+            Enter Id: <input type="text" class="form-control" formControlName = 'id' readonly>
+            Enter Name: <input type="text" class="form-control" formControlName = 'name'>
+            Enter Price: <input type="text" class="form-control" formControlName = 'price'>
+            Enter Qantity: <input type="text" class="form-control" formControlName = 'qty'>
+            <input type="submit" value="Edit Product" class = 'btn btn-success' [disabled] = '!productEditForm.valid'>
+        </div>
+    </form>
+</div>>

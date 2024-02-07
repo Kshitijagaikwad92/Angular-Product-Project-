@@ -1,0 +1,12 @@
+<div class="col-md-4 offset-md-4 shadow-lg p-5">
+    <form [formGroup] = 'productAddForm' (ngSubmit)="createNewProduct()">
+    <div class="row g-5">
+        <h2>Add Product</h2>
+        <input type="text" formControlName = 'id' placeholder="Enter Product Id" class="form-control">
+        <input type="text" formControlName = 'name' placeholder="Enter Product Name" class="form-control">
+        <input type="text" formControlName = 'price' placeholder="Enter Product Price" class="form-control">
+        <input type="text" formControlName = 'qty' placeholder="Enter Product Quantity" class="form-control">
+        <input type="submit" value="Add Product" class="btn btn-secondary" [disabled] = '!productAddForm.valid'>
+    </div>
+</form>
+</div>
